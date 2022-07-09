@@ -1,1 +1,1 @@
-export { default } from "./BannerTop";
+export { default } from "./BannerBottom";

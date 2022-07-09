@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 type ButtonProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   variant?: "contained" | "outlined" | "text";
   style?: React.StyleHTMLAttributes<any>;
   className?: string;

@@ -1,12 +1,12 @@
 import React from "react";
 import { NextPage } from "next";
-import Banner from "../src/components/Banner";
-import TextField from "../src/components/reusable/TextField";
+import BannerTop from "../src/components/BannerTop";
+import TextField from "../src/components/reusables/TextField";
 
 const Login: NextPage = () => {
   return (
     <main className="container">
-      <Banner />
+      <BannerTop />
       <section className="border w-3/6 mx-auto flex flex-col items-center justify-center">
         <h1 className="font-semibold text-primary text-xl text-center">
           Sign In

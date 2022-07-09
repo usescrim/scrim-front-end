@@ -46,7 +46,7 @@ const Button = ({
         iconPosition === "left" ? "row" : "flex-row-reverse"
       } items-center space-x-1 py-3 font-semibold px-5 rounded-3xl ${
         variants[variant]
-      }`}
+      } ${className}`}
     >
       <span>{icon}</span>
       <span>{children}</span>

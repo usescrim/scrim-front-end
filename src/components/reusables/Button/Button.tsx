@@ -12,12 +12,7 @@ type ButtonProps = {
   iconPosition?: "right" | "left";
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   animated?: boolean;
-};
-
-const animations = {
-  initial: { scale: 0.5 },
-  animate: { scale: 1 },
-  whileHover: { scale: 1.1 },
+  loading?: boolean;
 };
 
 const Button = ({
@@ -30,6 +25,7 @@ const Button = ({
   iconPosition = "left",
   onClick,
   animated = false,
+  loading = false,
 }: ButtonProps) => {
   const variants = {
     contained: `bg-${color} border-2 border-${color} text-white`,
@@ -48,8 +44,10 @@ const Button = ({
         variants[variant]
       } ${className}`}
     >
-      <span>{icon}</span>
-      <span>{children}</span>
+      {icon && (
+        <span className={`${loading ? "animate-spin" : ""}`}>{icon}</span>
+      )}
+      {children && <span>{children}</span>}
     </motion.button>
   );
 };

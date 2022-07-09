@@ -4,8 +4,8 @@ import Image from "next/image";
 
 import styles from "../styles/Home.module.css";
 
-import { FaBeer } from "react-icons/fa";
 import Link from "next/link";
+import Button from "../src/components/reusables/Button";
 
 const Home: NextPage = () => {
   return (
@@ -17,7 +17,14 @@ const Home: NextPage = () => {
       </Head>
       <div className="my-1 flex space-x-2">
         <Link href="/login">
-          <a>Login</a>
+          <a>
+            <Button>Login</Button>
+          </a>
+        </Link>
+        <Link href="/register">
+          <a>
+            <Button>Register</Button>
+          </a>
         </Link>
       </div>
     </div>

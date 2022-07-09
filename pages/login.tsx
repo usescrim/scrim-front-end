@@ -5,6 +5,8 @@ import TextField from "../src/components/reusables/TextField";
 import BannerBottom from "../src/components/BannerBottom";
 import Button from "../src/components/reusables/Button";
 
+import { CgArrowLongRight } from "react-icons/cg";
+
 import Link from "next/link";
 
 const Login: NextPage = () => {
@@ -31,9 +33,15 @@ const Login: NextPage = () => {
           </label>
           <TextField type="password" fullWidth placeholder="Password" />
         </div>
-        <Button className="my-1 self-end" color="primary" variant="contained">
+        {/* <Button className="my-1 self-end" color="primary" variant="contained">
           Login
-        </Button>
+        </Button> */}
+        <Button
+          icon={<CgArrowLongRight />}
+          className="my-1 self-end"
+          color="primary"
+          variant="contained"
+        />
       </section>
       <BannerBottom>
         <p className="text-gray-dark">Don't have an account?</p>

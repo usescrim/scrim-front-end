@@ -13,7 +13,7 @@ const Register: NextPage = () => {
   return (
     <main className="h-screen overflow-auto flex flex-col justify-between ">
       <BannerTop />
-      <section className="flex flex-col items-center justify-center px-5 lg:w-[80vw] md:w-[90vw] sm:w-[100vw] mx-auto ">
+      <section className="flex flex-col items-center justify-center px-5 my-5 md:my-0 lg:w-[80vw] md:w-[90vw] sm:w-[100vw] mx-auto ">
         <h1 className="font-semibold text-primary text-xl text-center my-2">
           Create an account
         </h1>
@@ -45,13 +45,13 @@ const Register: NextPage = () => {
             </label>
             <TextField type="password" fullWidth placeholder="Password" />
           </div>
-          <div className="my-2 w-full">
+          <div className="w-full"></div>
+          <div className="h-fit w-full  flex justify-center md:justify-end">
             <Link href={"/confirmation"}>
               <Button
                 icon={<CgArrowLongRight />}
-                className="my-1 self-end"
-                color="primary"
-                variant="contained"
+                className="self-end w-24 rounded-3xl"
+                variant="contained-primary"
               />
             </Link>
           </div>

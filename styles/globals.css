@@ -6,6 +6,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background-color: whitesmoke;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -17,4 +18,52 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@layer components {
+  .contained-primary {
+    @apply bg-primary border-2 border-transparent text-white;
+  }
+  .outlined-primary {
+    @apply text-primary border-2 border-primary;
+  }
+  .standard-primary {
+    @apply text-primary;
+  }
+  .contained-secondary {
+    @apply bg-secondary border-2 border-transparent text-white;
+  }
+  .outlined-secondary {
+    @apply text-secondary border-2 border-secondary;
+  }
+  .standard-secondary {
+    @apply text-secondary;
+  }
+  .contained-warning {
+    @apply bg-warning border-2 border-transparent text-white;
+  }
+  .outlined-warning {
+    @apply text-warning border-2 border-warning;
+  }
+  .standard-warning {
+    @apply text-warning;
+  }
+  .contained-error {
+    @apply bg-error border-2 border-transparent text-white;
+  }
+  .outlined-error {
+    @apply text-error border-2 border-error;
+  }
+  .standard-error {
+    @apply text-error;
+  }
+  .contained-success {
+    @apply bg-success border-2 border-transparent text-white;
+  }
+  .outlined-success {
+    @apply text-success border-2 border-success;
+  }
+  .standard-success {
+    @apply text-success;
+  }
 }

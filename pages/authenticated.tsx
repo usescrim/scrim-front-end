@@ -19,7 +19,7 @@ const Authenticated: NextPage = () => {
           src="/static/images/celebration.svg"
           alt=""
         />
-        <h1 className="font-semibold text-primary text-xl text-center my-2">
+        <h1 className="font-bold text-primary text-xl text-center my-2">
           Your mail has been successfully authenticated
         </h1>
         <p className="text-center my-2 text-gray-dark">
@@ -28,9 +28,8 @@ const Authenticated: NextPage = () => {
         <Link href={"/dashboard"}>
           <Button
             icon={<CgArrowLongRight />}
-            className="my-1"
-            color="primary"
-            variant="contained"
+            className="my-1 w-24 rounded-3xl"
+            variant="contained-primary"
           />
         </Link>
       </section>

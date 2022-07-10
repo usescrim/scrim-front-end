@@ -38,9 +38,8 @@ const Login: NextPage = () => {
         </Button> */}
         <Button
           icon={<CgArrowLongRight />}
-          className="my-1 self-end"
-          color="primary"
-          variant="contained"
+          className="my-1 self-end w-24 rounded-3xl"
+          variant="contained-primary"
         />
       </section>
       <BannerBottom>

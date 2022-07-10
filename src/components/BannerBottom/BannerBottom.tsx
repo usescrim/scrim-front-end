@@ -7,8 +7,10 @@ type BannerBottomTypes = {
 
 const BannerBottom = ({ children, className }: BannerBottomTypes) => {
   return (
-    <footer className="bg-bottom-banner bg-no-repeat bg-cover  min-h-[20vh] flex flex-col items-center justify-center space-x-2">
-      {children}
+    <footer className="bg-white">
+      <div className="bg-bottom-banner bg-no-repeat bg-cover  min-h-[20vh] flex flex-col items-center justify-center space-x-2">
+        {children}
+      </div>
     </footer>
   );
 };

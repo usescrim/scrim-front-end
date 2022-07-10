@@ -1,13 +1,35 @@
 import React from "react";
 
+import classNames from "classnames";
+
 import { motion } from "framer-motion";
+
+type containedType =
+  | "contained-primary"
+  | "contained-secondary"
+  | "contained-warning"
+  | "contained-error"
+  | "contained-success";
+
+type outlinedType =
+  | "outlined-primary"
+  | "outlined-secondary"
+  | "outlined-warning"
+  | "outlined-error"
+  | "outlined-success";
+
+type standardType =
+  | "standard-primary"
+  | "standard-secondary"
+  | "standard-warning"
+  | "standard-error"
+  | "standard-success";
 
 type ButtonProps = {
   children?: React.ReactNode;
-  variant?: "contained" | "outlined" | "text";
+  variant?: containedType | outlinedType | standardType;
   style?: React.StyleHTMLAttributes<any>;
   className?: string;
-  color?: "primary" | "secondary" | "warning" | "error" | "success";
   icon?: React.ReactNode;
   iconPosition?: "right" | "left";
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
@@ -17,32 +39,22 @@ type ButtonProps = {
 
 const Button = ({
   children,
-  variant = "contained",
+  variant = "contained-primary",
   style,
-  className,
-  color = "primary",
+  className = "",
   icon,
   iconPosition = "left",
   onClick,
   animated = false,
   loading = false,
 }: ButtonProps) => {
-  const variants = {
-    contained: `bg-${color} border-2 border-${color} text-white`,
-    outlined: `border-2 border-${color} text-${color}`,
-    text: `text-${color}`,
-  };
   return (
     <motion.button
       initial={animated ? { scale: 0.5 } : {}}
       animate={animated ? { scale: 1 } : {}}
       whileHover={animated ? { scale: 1.1 } : {}}
       onClick={onClick}
-      className={`flex ${
-        iconPosition === "left" ? "row" : "flex-row-reverse"
-      } items-center space-x-1 py-3 font-semibold px-5 rounded-3xl ${
-        variants[variant]
-      } ${className}`}
+      className={`flex items-center justify-center space-x-1 p-3 font-semibold text-sm  ${variant} ${className} rounded-2xl`}
     >
       {icon && (
         <span className={`${loading ? "animate-spin" : ""}`}>{icon}</span>

@@ -27,6 +27,9 @@ module.exports = {
       backgroundImage: {
         "bottom-banner": "url('/static/images/bannerBottom.svg')",
       },
+      fontFamily: {
+        moderat: ["Moderat", "sans-serif"],
+      },
     },
   },
   plugins: [],

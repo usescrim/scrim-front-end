@@ -9,7 +9,7 @@ const DashboardLayout = ({ children }: LayoutTypes) => {
   return (
     <main className="flex ">
       <Sidebar />
-      <section className="p-5">{children}</section>
+      <section className="p-5 w-fit md:w-[82vw]">{children}</section>
     </main>
   );
 };

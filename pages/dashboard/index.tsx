@@ -1,14 +1,17 @@
 import React from "react";
 import { NextPage } from "next";
-import Sidebar from "../../src/components/Sidebar";
-import DashboardLayout from "../../src/components/DashboardLayout";
 
-const Dashboard: NextPage = () => {
-  return (
-    <DashboardLayout>
-      <h1>Welcome user</h1>
-    </DashboardLayout>
-  );
+const Index: NextPage = () => {
+  return <>loading...</>;
 };
 
-export default Dashboard;
+export default Index;
+
+export const getServerSideProps = async () => {
+  return {
+    redirect: {
+      permanent: false,
+      destination: `/dashboard/home`,
+    },
+  };
+};

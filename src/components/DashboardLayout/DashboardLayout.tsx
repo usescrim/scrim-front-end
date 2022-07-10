@@ -7,9 +7,11 @@ type LayoutTypes = {
 
 const DashboardLayout = ({ children }: LayoutTypes) => {
   return (
-    <main className="flex ">
+    <main className="flex flex-col-reverse md:flex-row w-screen">
       <Sidebar />
-      <section className="p-5 w-fit md:w-[82vw]">{children}</section>
+      <section className="p-3 md:p-8 w-full md:w-[82vw] mb-10 md:mb-0">
+        {children}
+      </section>
     </main>
   );
 };

@@ -25,6 +25,11 @@ const Home: NextPage = () => {
             <Button variant="outlined-success">Register</Button>
           </a>
         </Link>
+        <Link href="/dashboard">
+          <a>
+            <Button variant="outlined-success">Dashboard</Button>
+          </a>
+        </Link>
       </div>
     </div>
   );

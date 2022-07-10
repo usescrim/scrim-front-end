@@ -13,7 +13,7 @@ const Navbar = () => {
   const [mode, setMode] = React.useState<"dark" | "light">("light");
   return (
     <>
-      <nav className="bg-white border-b border-gray-light">
+      <nav className="bg-white border-b border-gray-light px-2 md:px-10 sm:px-4 ">
         <div className="max-w-7xl mx-auto px-2">
           <div className="relative flex items-center justify-between h-16">
             <div className="flex-1 flex items-center  sm:items-stretch sm:justify-start">

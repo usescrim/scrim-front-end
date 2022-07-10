@@ -1,0 +1,31 @@
+<svg width="352" height="190" viewBox="0 0 352 190" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<mask id="mask0_19_728" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="352" height="190">
+<g style="mix-blend-mode:multiply">
+<mask id="mask1_19_728" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="352" height="190">
+<rect width="352" height="190" rx="30" fill="url(#paint0_linear_19_728)"/>
+</mask>
+<g mask="url(#mask1_19_728)">
+<rect width="392.344" height="250.954" transform="matrix(0.978591 0.205816 -0.226958 0.973904 8.54102 -65.7034)" fill="url(#pattern0)"/>
+</g>
+</g>
+</mask>
+<g mask="url(#mask0_19_728)">
+<rect width="352" height="190" rx="30" fill="url(#paint1_linear_19_728)"/>
+</g>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="0.0611709" height="0.0956352">
+<use xlink:href="#image0_19_728" transform="scale(0.00254879 0.0039848)"/>
+</pattern>
+<linearGradient id="paint0_linear_19_728" x1="159" y1="232.275" x2="155.39" y2="-62.7048" gradientUnits="userSpaceOnUse">
+<stop stop-color="#7000FF"/>
+<stop offset="1" stop-color="#16032E"/>
+</linearGradient>
+<linearGradient id="paint1_linear_19_728" x1="189.5" y1="-14.725" x2="82.2668" y2="401.885" gradientUnits="userSpaceOnUse">
+<stop offset="0.255193" stop-color="#7000FF" stop-opacity="0.59"/>
+<stop offset="0.531489" stop-color="#5401BD"/>
+<stop offset="0.630017" stop-color="#5401BD"/>
+<stop offset="1" stop-color="#16032E"/>
+</linearGradient>
+<image id="image0_19_728" width="24" height="24" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAIVJREFUSEvtlUEOgCAMBJf/P1ojsUYL7bbKxaRcPFBmzCYsDbm1AWgA5EtPH8PRpaEhSVRgwagkImAQd58JGFziNec8QRTuSixBFm5KZoK38KlEC77CB8ldsAr+kIhgNfySpK79eSr1M+we6BqpLpoWK8u8uij6HvW5Ia7qIi+/Htf/u2gHeYIwF9DpM0UAAAAASUVORK5CYII="/>
+</defs>
+</svg>

@@ -23,20 +23,19 @@ const Sidebar = () => {
     { title: "Profile", link: "/dashboard/profile", icon: Profile },
   ];
   return (
-    <aside className="min-h-[90vh] w-fit md:w-[18vw] bg-white">
-      <ul className="py-20 flex flex-col h-[90vh]">
+    <aside className="fixed md:static bottom-0 left-0 h-fit md:h-[90vh] w-full md:w-[18vw] bg-white border-t border-gray-light sm:border-t-0">
+      <ul className="md:py-20 flex flex-row justify-between h-fit md:flex-col md:h-[90vh]">
         {items.map((item, index) => {
           let Icon = item.icon;
           return (
-            <Link href={item.link}>
-              <a>
+            <Link key={item.title} href={item.link} className="h-fit w-full">
+              <a className="h-fit w-full">
                 <li
-                  key={item.title}
                   title={item.title}
-                  className={`px-5 py-4 w-fit lg:pl-14 lg:w-full md:pl-8 md:w-full sm:px-8 sm:w-fit cursor-pointer flex items-center hover:bg-slate-100 space-x-3 ${
+                  className={`p-8 md:px-5 md:py-4 w-full lg:pl-14 lg:w-full md:pl-8 md:w-full sm:px-8 sm:w-fit cursor-pointer flex items-center justify-center md:justify-start hover:bg-slate-100 space-x-3 ${
                     router.pathname.startsWith(item.link)
-                      ? "bg-slate-100 border-r-8 border-primary text-primary"
-                      : "hover:border-r-8 hover:border-slate-100"
+                      ? "bg-slate-100 border-b-8 md:border-r-8 md:border-b-0 border-primary text-primary"
+                      : "hover:border-b-8 hover:border-slate-100 md:hover:border-b-0 md:hover:border-r-8 md:hover:border-slate-100"
                   } `}
                 >
                   <Icon
@@ -55,10 +54,10 @@ const Sidebar = () => {
             </Link>
           );
         })}
-        <li className="grow"></li>
+        <li className="grow hidden md:flex"></li>
         <li
           title={"Logout"}
-          className={`px-5 py-4 w-fit lg:pl-14 lg:py-4 lg:w-full md:pl-8 md:w-full sm:px-8 sm:w-fit justify-self-end cursor-pointer flex items-center hover:bg-slate-100 space-x-3 text-error hover:border-r-8 hover:border-slate-100 `}
+          className={`hidden px-5 py-4 w-fit lg:pl-14 lg:py-4 lg:w-full md:pl-8 md:w-full sm:px-8 sm:w-fit justify-self-end cursor-pointer md:flex items-center hover:bg-slate-100 space-x-3 text-error hover:border-r-8 hover:border-slate-100 `}
         >
           <Logout />{" "}
           <span className="lg:block md:block sm:hidden hidden">Logout</span>

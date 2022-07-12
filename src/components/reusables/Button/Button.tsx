@@ -54,7 +54,7 @@ const Button = ({
       animate={animated ? { scale: 1 } : {}}
       whileHover={animated ? { scale: 1.1 } : {}}
       onClick={onClick}
-      className={`flex items-center justify-center space-x-1 p-3 font-semibold text-sm  ${variant} ${className} rounded-2xl`}
+      className={`flex items-center justify-center space-x-1 p-3 font-semibold text-sm  ${variant} ${className} rounded-[30px]`}
     >
       {icon && (
         <span className={`${loading ? "animate-spin" : ""}`}>{icon}</span>

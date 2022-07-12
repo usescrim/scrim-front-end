@@ -4,6 +4,7 @@ import DashboardLayout from "../../../src/components/DashboardLayout";
 import Button from "../../../src/components/reusables/Button";
 
 import { CgArrowLongRight } from "react-icons/cg";
+import QuickActions from "../../../src/components/Dashboard/QuickActions";
 
 const Dashboard: NextPage = () => {
   return (
@@ -39,14 +40,14 @@ const Dashboard: NextPage = () => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-between h-64 w-full md:w-1/2 rounded-[3rem] py-5 md:p-5">
-          <div className="bg-white flex flex-row items-center justify-between h-2/5 w-full p-5 rounded-3xl">
+          <div className="bg-white flex flex-row items-center justify-between h-2/5 w-full p-5 rounded-[20px]">
             <h1 className="text-secondary font-semibold">Deposit</h1>
             <Button
               icon={<CgArrowLongRight />}
               className="w-24 rounded-[30px]"
             />
           </div>
-          <div className="bg-white flex flex-row items-center justify-between h-2/5 w-full p-5 rounded-3xl">
+          <div className="bg-white flex flex-row items-center justify-between h-2/5 w-full p-5 rounded-[20px]">
             <h1 className="text-secondary font-semibold">Send Money</h1>
             <Button
               icon={<CgArrowLongRight />}
@@ -55,6 +56,8 @@ const Dashboard: NextPage = () => {
           </div>
         </div>
       </div>
+      <h1 className="text-gray-dark text-xl">Quick Actions</h1>
+      <QuickActions />
     </DashboardLayout>
   );
 };

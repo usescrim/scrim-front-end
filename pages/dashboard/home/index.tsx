@@ -5,6 +5,7 @@ import Button from "../../../src/components/reusables/Button";
 
 import { CgArrowLongRight } from "react-icons/cg";
 import QuickActions from "../../../src/components/Dashboard/QuickActions";
+import TransactionsHistory from "../../../src/components/Dashboard/TransactionsHistory";
 
 const Dashboard: NextPage = () => {
   return (
@@ -58,6 +59,8 @@ const Dashboard: NextPage = () => {
       </div>
       <h1 className="text-gray-dark text-xl">Quick Actions</h1>
       <QuickActions />
+      <h1 className="text-gray-dark text-xl">Transactions History</h1>
+      <TransactionsHistory />
     </DashboardLayout>
   );
 };

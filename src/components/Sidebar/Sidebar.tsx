@@ -24,28 +24,39 @@ const Sidebar = () => {
   ];
   return (
     <aside className="fixed md:static bottom-0 left-0 h-fit md:h-[90vh] w-full md:w-[18vw] bg-white border-t border-gray-light sm:border-t-0">
-      <ul className="md:py-20 flex flex-row justify-between h-fit md:flex-col md:h-[90vh]">
+      <ul className="md:py-20 flex flex-row justify-between h-fit md:flex-col md:h-[90vh] w-full">
         {items.map((item, index) => {
           let Icon = item.icon;
           return (
-            <Link key={item.title} href={item.link} className="h-fit w-full">
+            <Link key={item.title} href={item.link} className="h-fit w-1/4">
               <a className="h-fit w-full">
                 <li
                   title={item.title}
-                  className={`p-8 md:px-5 md:py-4 w-full lg:pl-14 lg:w-full md:pl-8 md:w-full sm:px-8 sm:w-fit cursor-pointer flex items-center justify-center md:justify-start hover:bg-slate-100 space-x-3 ${
+                  className={`p-5 py-8 md:px-5 md:py-4 w-full lg:pl-14 lg:w-full md:pl-8 md:w-full sm:px-8 sm:w-fit cursor-pointer flex items-center justify-center md:justify-start hover:bg-slate-100 space-x-3 ${
                     router.pathname.startsWith(item.link)
-                      ? "bg-slate-100 border-b-8 md:border-r-8 md:border-b-0 border-primary text-primary"
+                      ? "bg-slate-100 border-t-8 md:border-r-8 md:border-t-0 border-primary text-primary"
                       : "hover:border-b-8 hover:border-slate-100 md:hover:border-b-0 md:hover:border-r-8 md:hover:border-slate-100"
                   } `}
                 >
-                  <Icon
-                    color={
-                      router.pathname.startsWith(item.link)
-                        ? "#7000FF"
-                        : "#4F5255"
-                    }
-                  />
+                  <span
+                    className={`md:block ${
+                      !router.pathname.startsWith(item.link)
+                        ? "hidden"
+                        : "block"
+                    }`}
+                  >
+                    <Icon
+                      color={
+                        router.pathname.startsWith(item.link)
+                          ? "#7000FF"
+                          : "#4F5255"
+                      }
+                    />
+                  </span>
 
+                  {!router.pathname.startsWith(item.link) ? (
+                    <span className="md:hidden text-sm">{item.title}</span>
+                  ) : null}
                   <span className="lg:block md:block sm:hidden hidden">
                     {item.title}
                   </span>

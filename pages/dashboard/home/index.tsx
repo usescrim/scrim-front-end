@@ -6,8 +6,10 @@ import Button from "../../../src/components/reusables/Button";
 import { CgArrowLongRight } from "react-icons/cg";
 import QuickActions from "../../../src/components/Dashboard/QuickActions";
 import TransactionsHistory from "../../../src/components/Dashboard/TransactionsHistory";
+import { useRouter } from "next/router";
 
 const Dashboard: NextPage = () => {
+  const router = useRouter();
   return (
     <DashboardLayout>
       <h1 className="text-primary text-2xl font-semibold font-moderat">
@@ -44,6 +46,7 @@ const Dashboard: NextPage = () => {
           <div className="bg-white flex flex-row items-center justify-between h-2/5 w-full p-5 rounded-[20px]">
             <h1 className="text-secondary font-semibold">Deposit</h1>
             <Button
+              onClick={() => router.push("home/deposit")}
               icon={<CgArrowLongRight />}
               className="w-24 rounded-[30px]"
             />
@@ -51,6 +54,7 @@ const Dashboard: NextPage = () => {
           <div className="bg-white flex flex-row items-center justify-between h-2/5 w-full p-5 rounded-[20px]">
             <h1 className="text-secondary font-semibold">Send Money</h1>
             <Button
+              onClick={() => router.push("home/send")}
               icon={<CgArrowLongRight />}
               className="w-24 rounded-[30px]"
             />

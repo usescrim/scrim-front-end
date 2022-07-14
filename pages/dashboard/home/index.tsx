@@ -7,14 +7,25 @@ import QuickActions from "../../../src/components/Dashboard/QuickActions";
 import TransactionsHistory from "../../../src/components/Dashboard/TransactionsHistory";
 import { useRouter } from "next/router";
 import Arrow from "../../../src/Icons/Arrow";
+import Ninja from "../../../src/Icons/Ninja";
+import ScrimButton from "../../../src/components/reusables/ScrimButton";
 
 const Dashboard: NextPage = () => {
   const router = useRouter();
   return (
     <DashboardLayout>
-      <h1 className="text-primary text-2xl font-semibold font-moderat">
-        Hey Nagamoto
-      </h1>
+      <div className="flex flex-row items-center  space-x-2">
+        <img
+          src="/static/images/user.svg"
+          className="border border-white ring-2 ring-primary rounded-full"
+          alt=""
+        />
+        <h1 className="text-primary text-2xl font-semibold font-moderat">
+          Hey Nagamoto
+        </h1>
+        <Ninja />
+      </div>
+
       <p className="text-slate-500 my-3">
         who would you try to scrim at today {"🤲🏿"}
       </p>
@@ -45,18 +56,16 @@ const Dashboard: NextPage = () => {
         <div className="flex flex-col items-center justify-between h-64 w-full md:w-1/2 rounded-[3rem] py-5 md:p-5">
           <div className="bg-white flex flex-row items-center justify-between h-2/5 w-full p-5 rounded-[20px]">
             <h1 className="text-secondary font-semibold">Deposit</h1>
-            <Button
+            <ScrimButton
+              className="w-36"
               onClick={() => router.push("home/deposit")}
-              icon={<Arrow color="white" />}
-              className="w-24 rounded-[30px]"
             />
           </div>
           <div className="bg-white flex flex-row items-center justify-between h-2/5 w-full p-5 rounded-[20px]">
             <h1 className="text-secondary font-semibold">Send Money</h1>
-            <Button
+            <ScrimButton
+              className="w-36"
               onClick={() => router.push("home/send")}
-              icon={<Arrow color="white" />}
-              className="w-24 rounded-[30px]"
             />
           </div>
         </div>

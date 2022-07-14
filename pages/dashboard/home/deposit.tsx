@@ -8,6 +8,7 @@ import CustomInput from "../../../src/components/reusables/CustomInput";
 import OrchestateHq from "../../../src/Icons/OrchestateHq";
 import { useRouter } from "next/router";
 import Arrow from "../../../src/Icons/Arrow";
+import ScrimButton from "../../../src/components/reusables/ScrimButton";
 
 const Deposit: NextPage = () => {
   const router = useRouter();
@@ -42,7 +43,7 @@ const Deposit: NextPage = () => {
                 </h1>
               </div>
               <span className="grow"></span>
-              <Button icon={<Arrow color="white" />} className="w-28" />
+              <ScrimButton />
             </div>
           </div>
         </div>

@@ -30,7 +30,7 @@ const ScrimButton = ({
       animate={animated ? { scale: 1 } : {}}
       whileHover={animated ? { scale: 1.1 } : {}}
       onClick={onClick}
-      className={`flex items-center justify-center w-28 space-x-1 p-4 font-semibold text-sm  ${
+      className={`flex items-center justify-center w-fit md:w-28 p-4 px-5 font-semibold text-sm  ${
         variant === "primary"
           ? "bg-primary border-2 border-transparent text-white"
           : "bg-white border-2 border-transparent text-primary"

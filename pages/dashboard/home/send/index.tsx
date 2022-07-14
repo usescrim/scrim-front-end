@@ -10,6 +10,7 @@ import SingleSend from "../../../../src/Icons/SingleSend";
 import BulkSend from "../../../../src/Icons/BulkSend";
 import { useRouter } from "next/router";
 import Arrow from "../../../../src/Icons/Arrow";
+import ScrimButton from "../../../../src/components/reusables/ScrimButton";
 
 const Send: NextPage = () => {
   const router = useRouter();
@@ -33,7 +34,7 @@ const Send: NextPage = () => {
             </h1>
           </div>
           <span className="grow"></span>
-          <Button className="w-28" icon={<Arrow color="white" />} />
+          <ScrimButton />
         </div>
         <div className="w-full bg-white rounded-[20px] flex flex-row p-5 md:px-10 items-center space-x-5">
           <BulkSend />
@@ -42,11 +43,7 @@ const Send: NextPage = () => {
             <h1 className=" text-slate-400">Send scrims to your geng !</h1>
           </div>
           <span className="grow"></span>
-          <Button
-            onClick={() => router.push("send/bulk")}
-            className="w-28"
-            icon={<Arrow color="white" />}
-          />
+          <ScrimButton onClick={() => router.push("send/bulk")} />
         </div>
       </section>
     </DashboardLayout>

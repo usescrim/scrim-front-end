@@ -71,6 +71,14 @@ a {
   .standard-success {
     @apply text-success;
   }
+
+  .input-primary {
+    @apply border-primary text-primary placeholder-primary;
+  }
+
+  .input-black {
+    @apply border-black text-black placeholder-black;
+  }
 }
 
 @font-face {

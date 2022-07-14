@@ -81,7 +81,7 @@ const Bulk: NextPage = () => {
               </>
             );
           })}
-          <div className="flex items-center justify-between w-full p-0 md:pl-16 md:pr-10 ">
+          <div className="flex items-center justify-between w-full p-0 md:pl-16 md:pr-14 ">
             <h1 className=" text-primary flex flex-row items-center md:self-center space-x-2 text-lg md:text-xl w-fit">
               <span>
                 <MdAddCircle size={50} />
@@ -148,6 +148,7 @@ const Person = (props: any) => {
         <div className="w-full">
           <TextField
             label="Username"
+            fullWidth
             className="w-[100%] md:w-[90%]"
             placeholder="@username"
           />
@@ -156,7 +157,7 @@ const Person = (props: any) => {
           <TextField
             label="Amount"
             className="w-[100%] md:w-[90%]"
-            // fullWidth
+            fullWidth
             placeholder="amount"
           />
         </div>

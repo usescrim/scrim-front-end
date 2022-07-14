@@ -8,7 +8,7 @@ type ModalType = {
 
 const Success = ({ onScrim }: ModalType) => {
   return (
-    <div className="bg-white w-11/12 md:w-2/5 p-10 px-10 flex flex-col justify-center items-center rounded-[70px]">
+    <div className="bg-white w-11/12 md:w-2/5 p-10 px-10 flex flex-col justify-center items-center rounded-[30px]">
       <SuccessIcon />
       <h1 className="font-bold text-xl text-secondary my-5">
         Scrims successfully sent

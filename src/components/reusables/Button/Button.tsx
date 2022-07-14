@@ -35,6 +35,7 @@ type ButtonProps = {
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   animated?: boolean;
   loading?: boolean;
+  title?: string;
 };
 
 const Button = ({
@@ -47,6 +48,7 @@ const Button = ({
   onClick,
   animated = false,
   loading = false,
+  title,
 }: ButtonProps) => {
   return (
     <motion.button
@@ -59,7 +61,17 @@ const Button = ({
       {icon && (
         <span className={`${loading ? "animate-spin" : ""}`}>{icon}</span>
       )}
-      {children && <span>{children}</span>}
+      {children && (
+        <span
+          style={{
+            fontWeight: "inherit",
+            color: "inherit",
+            fontSize: "inherit",
+          }}
+        >
+          {children}
+        </span>
+      )}
     </motion.button>
   );
 };

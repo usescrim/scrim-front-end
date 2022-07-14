@@ -8,6 +8,7 @@ import Button from "../src/components/reusables/Button";
 import { CgArrowLongRight } from "react-icons/cg";
 
 import Link from "next/link";
+import ScrimButton from "../src/components/reusables/ScrimButton";
 
 const Login: NextPage = () => {
   return (
@@ -22,25 +23,17 @@ const Login: NextPage = () => {
           scrims
         </p>
         <div className="my-2 w-full">
-          <label htmlFor="email" className="self-start text-gray my-1">
-            Email
-          </label>
-          <TextField fullWidth placeholder="Email address" />
+          <TextField label="Email" fullWidth placeholder="Email address" />
         </div>
         <div className="my-2 w-full">
-          <label htmlFor="password" className="self-start text-gray my-1">
-            Password
-          </label>
-          <TextField type="password" fullWidth placeholder="Password" />
+          <TextField
+            label=" Password"
+            type="password"
+            fullWidth
+            placeholder="Password"
+          />
         </div>
-        {/* <Button className="my-1 self-end" color="primary" variant="contained">
-          Login
-        </Button> */}
-        <Button
-          icon={<CgArrowLongRight />}
-          className="my-1 self-end w-24 rounded-3xl"
-          variant="contained-primary"
-        />
+        <ScrimButton className="my-1 self-end " />
       </section>
       <BannerBottom>
         <p className="text-gray-dark">Don't have an account?</p>

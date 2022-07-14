@@ -5,31 +5,30 @@ type TextFieldProps = {
   value?: string | number;
   placeholder?: string;
   fullWidth?: boolean;
-  type?: "password" | "number" | "text" | "email";
   className?: string;
   label?: string;
-  parent?: string;
+  rows?: number;
 };
 
-const TextField = ({
+const TextArea = ({
   onChange,
   value,
   placeholder,
   fullWidth = false,
-  type = "text",
+  rows = 4,
   className,
   label,
-  parent,
 }: TextFieldProps) => {
   return (
-    <div className={`flex flex-col w-full  ${parent}`}>
+    <div className="flex flex-col">
       {label && (
         <span className="self-start text-gray my-2 mx-0 text-md md:ml-3">
           {label}
         </span>
       )}
-      <input
-        type={type}
+      <textarea
+        rows={rows}
+        cols={rows}
         placeholder={placeholder}
         className={`border-2 border-primary font-semibold focus-within:outline-none p-2 px-5 h-14 rounded-3xl text-primary  placeholder-primary placeholder-opacity-50 ${
           fullWidth ? "w-full" : "w-64"
@@ -39,4 +38,4 @@ const TextField = ({
   );
 };
 
-export default TextField;
+export default TextArea;

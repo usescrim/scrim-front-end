@@ -1,7 +1,6 @@
 import React from "react";
 import { NextPage } from "next";
 
-import { CgArrowLongRight } from "react-icons/cg";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 import Button from "../../../../src/components/reusables/Button";
@@ -10,6 +9,7 @@ import DashboardLayout from "../../../../src/components/DashboardLayout";
 import SingleSend from "../../../../src/Icons/SingleSend";
 import BulkSend from "../../../../src/Icons/BulkSend";
 import { useRouter } from "next/router";
+import Arrow from "../../../../src/Icons/Arrow";
 
 const Send: NextPage = () => {
   const router = useRouter();
@@ -19,7 +19,7 @@ const Send: NextPage = () => {
         <div className="flex items-center space-x-2">
           <Button
             onClick={() => router.back()}
-            className="rounded-none bg-white"
+            className="rounded-[0px] bg-white"
             icon={<AiOutlineArrowLeft color="black" />}
           />
           <h1 className="text-lg">Send Money</h1>
@@ -33,7 +33,7 @@ const Send: NextPage = () => {
             </h1>
           </div>
           <span className="grow"></span>
-          <Button className="w-28" icon={<CgArrowLongRight />} />
+          <Button className="w-28" icon={<Arrow color="white" />} />
         </div>
         <div className="w-full bg-white rounded-[20px] flex flex-row p-5 md:px-10 items-center space-x-5">
           <BulkSend />
@@ -42,7 +42,11 @@ const Send: NextPage = () => {
             <h1 className=" text-slate-400">Send scrims to your geng !</h1>
           </div>
           <span className="grow"></span>
-          <Button className="w-28" icon={<CgArrowLongRight />} />
+          <Button
+            onClick={() => router.push("send/bulk")}
+            className="w-28"
+            icon={<Arrow color="white" />}
+          />
         </div>
       </section>
     </DashboardLayout>

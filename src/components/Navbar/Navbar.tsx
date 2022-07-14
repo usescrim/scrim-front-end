@@ -42,21 +42,21 @@ const Navbar = () => {
                   />
                 ) : (
                   <Button
-                    className="rounded-1xl"
+                    className="rounded-2xl"
                     onClick={() => setMode("dark")}
                     variant="outlined-primary"
                     icon={<BsMoonFill />}
                   />
                 )}
               </div>
-              <div className="flex flex-row items-center justify-between space-x-2">
+              {/* <div className="flex flex-row items-center justify-between space-x-2">
                 <span className="text-primary font-bold">@Nagamoto</span>
                 <img
                   src="/static/images/user.svg"
                   className="border border-white ring-2 ring-primary rounded-full"
                   alt=""
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

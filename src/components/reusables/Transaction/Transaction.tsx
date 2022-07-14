@@ -19,7 +19,7 @@ const Transaction = ({ transaction }: PropsType) => {
     <div className="w-full bg-white rounded-[20px] flex flex-row p-5 md:px-10 items-center space-x-5">
       <TransactionIcon />{" "}
       <div className="flex flex-col w-fit space-y-2">
-        <h1 className="font-bold text-xl">{reciever}</h1>
+        <h1 className="font-semibold text-lg">{reciever}</h1>
         <h1 className="capitalize flex items-center space-x-2">
           <img
             className="w-[20px]"
@@ -31,8 +31,7 @@ const Transaction = ({ transaction }: PropsType) => {
       </div>
       <span className="grow"></span>
       <div className="flex flex-col w-fit items-end space-y-2">
-        <h1 className="font-bold text-xl flex items-center space-x-2">
-          {" "}
+        <h1 className="font-semibold text-lg flex items-center space-x-2">
           <img
             className="w-[20px]"
             src={`/static/images/tokenLogo.svg`}

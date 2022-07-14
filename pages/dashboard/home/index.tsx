@@ -3,10 +3,10 @@ import { NextPage } from "next";
 import DashboardLayout from "../../../src/components/DashboardLayout";
 import Button from "../../../src/components/reusables/Button";
 
-import { CgArrowLongRight } from "react-icons/cg";
 import QuickActions from "../../../src/components/Dashboard/QuickActions";
 import TransactionsHistory from "../../../src/components/Dashboard/TransactionsHistory";
 import { useRouter } from "next/router";
+import Arrow from "../../../src/Icons/Arrow";
 
 const Dashboard: NextPage = () => {
   const router = useRouter();
@@ -23,7 +23,7 @@ const Dashboard: NextPage = () => {
           <div className="bg-[url('/static/images/balanceCardBg.svg')] bg-no-repeat bg-cover flex flex-col items-center justify-around w-full h-72 p-5 ">
             <Button
               variant="contained-warning"
-              className="text-primary w-full md:w-2/5 rounded-[30px]"
+              className="text-primary w-4/5 md:w-2/5 rounded-[30px]"
             >
               Balance
             </Button>
@@ -36,7 +36,7 @@ const Dashboard: NextPage = () => {
             </div>
             <Button
               variant="contained-secondary"
-              className="w-full md:w-2/5 rounded-[30px]"
+              className="w-4/5 md:w-2/5 rounded-[30px]"
             >
               = N60,000/$100
             </Button>
@@ -47,7 +47,7 @@ const Dashboard: NextPage = () => {
             <h1 className="text-secondary font-semibold">Deposit</h1>
             <Button
               onClick={() => router.push("home/deposit")}
-              icon={<CgArrowLongRight />}
+              icon={<Arrow color="white" />}
               className="w-24 rounded-[30px]"
             />
           </div>
@@ -55,15 +55,17 @@ const Dashboard: NextPage = () => {
             <h1 className="text-secondary font-semibold">Send Money</h1>
             <Button
               onClick={() => router.push("home/send")}
-              icon={<CgArrowLongRight />}
+              icon={<Arrow color="white" />}
               className="w-24 rounded-[30px]"
             />
           </div>
         </div>
       </div>
-      <h1 className="text-gray-dark text-xl">Quick Actions</h1>
+      <h1 className="text-gray-dark font-semibold text-xl">Quick Actions</h1>
       <QuickActions />
-      <h1 className="text-gray-dark text-xl">Transactions History</h1>
+      <h1 className="text-gray-dark font-semibold text-xl">
+        Transactions History
+      </h1>
       <TransactionsHistory />
     </DashboardLayout>
   );

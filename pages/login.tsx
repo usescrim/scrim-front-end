@@ -36,7 +36,7 @@ const Login: NextPage = () => {
         <ScrimButton className="my-1 self-end " />
       </section>
       <BannerBottom>
-        <p className="text-gray-dark">Don't have an account?</p>
+        <p className="text-gray-dark">Don&apos;t have an account?</p>
         <Link href={"/register"}>
           <a className="text-primary font-semibold">Create an account</a>
         </Link>

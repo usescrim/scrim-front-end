@@ -104,9 +104,10 @@ const Bulk: NextPage = () => {
             </span>
           </div>
           <div className="w-full space-y-2 py-3">
-            {platforms.map((_platform) => {
+            {platforms.map((_platform, index) => {
               return (
                 <div
+                  key={index}
                   onClick={() => {
                     setPlatform(_platform);
                     setModal(false);
